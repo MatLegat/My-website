@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Teste</title>
+<link rel="stylesheet" type="text/css" href="_estilos/estilo.css" />
+<link rel="stylesheet" type="text/css" href="_estilos/galeria.css" />
+<script>
+var zAtual = 100000
+function a(id){
+	zAtual++;
+	document.getElementById(id).style.zIndex = zAtual;
+}
+function alerta(){
+	alert(zAtual)
+}
+</script>
+</head>
+
+<body>
+<div id="pagina" style="min-width:950px">
+<header id="area-principal"><div id=topo><div id=topo2>
+<h1 id="titulo-site"><a href="index.html">Um site qualquer</a></h1>
+<nav id="menu">
+<ul>
+<a href="index.html"><li>Home</li></a><div class="espacador-menu"></div>
+<div class="espacador-menu"></div><a href="fotos.html"><li>Fotos</li></a><div class="espacador-menu"></div>
+<div class="espacador-menu"></div><a href="sobre.html"><li>Sobre</li></a>
+</ul>
+</nav>
+</div></div></header>
+<section id="corpo">
+
+<h1 class="titulo-local">Fotos</h1>
+
+<div id=galeria>
+<div id="img1" class="imagem" onmouseover="a('img1')"><span class="legenda">BMX</span></div>
+<div id="img2" class="imagem" onmouseover="a('img2')"><span class="legenda">Escada espiral</span></div>
+<div id="img3" class="imagem" onmouseover="a('img3')"><span class="legenda">Camiseta</span></div>
+<div id="img4" class="imagem" onmouseover="a('img4')"><span class="legenda">Abacate</span></div>
+<div id="img5" class="imagem" onmouseover="a('img5')"><span class="legenda">Barack Obama</span></div>
+<div id="img6" class="imagem" onmouseover="a('img6')"><span class="legenda">Espaço</span></div>
+<div id="img7" class="imagem" onmouseover="a('img7')"><span class="legenda">Servidores</span></div>
+<div id="img8" class="imagem" onmouseover="a('img8')"><span class="legenda">Alpacas</span></div>
+<div id="img9" class="imagem" onmouseover="a('img9')"><span class="legenda">Mais uma imagem aleatória</span></div>
+</div>
+
+</section>
+<footer id="rodape">
+Matteus Legat - 2014<br />
+<a href="http://facebook.com/matteus.legat" target="_blank">Facebook</a> | 
+<a href="https://plus.google.com/u/0/110430598846492865230" target="_blank">Google+</a>
+</footer>
+</div>
+<div id="espacador-final-foto"></div>
+</body>
+</html>

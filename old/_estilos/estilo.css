@@ -1,0 +1,150 @@
+@charset: "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Comfortaa:700);
+
+body{
+	text-align:justify;
+	background-color:#dddddd;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12pt;
+	font-weight:normal;
+}
+
+a{
+	color:#333333;
+	text-decoration:none;
+	-webkit-transition:all .3s;
+	-moz-transition:all .3s;
+	-o-transition:all .3s;
+	transition:all .3s;
+}
+a:hover{
+	color:#3333aa;
+}
+
+p{
+	text-indent:30px;
+}
+
+div#pagina{
+	position:relative;
+	top:3px;
+	display:block;
+	height:auto;
+	width:auto;
+	min-width:330px;
+	margin-left:1%;
+	margin-right:1%;
+	margin-top:13px;
+	box-shadow:0px 0px 5px rgba(0,0,0,.8);
+	background-color: white;
+	padding:0px;
+}
+h1#titulo-site{
+	position:absolute;
+	top:-14px;
+	left:20px;
+	font-family: 'Comfortaa', sans-serif;
+	font-weight:700;
+	font-size:28pt;
+	text-shadow: 1px 1px 3px rgba(0,0,0,1);
+}
+h1#titulo-site a{
+	 color:#ffffff;
+ }
+h1#titulo-site a:hover{
+	 color:#ffffff;
+ }
+
+nav#menu{
+	display:block;
+}
+nav#menu ul{
+	font-size:11pt;
+	list-style:none;
+	text-transform:uppercase;
+	position:absolute;
+	bottom: -15px;
+	right: 10px;
+}
+nav#menu h1{
+	display:none;
+}
+nav#menu li:hover {
+	color: white;
+	background-color:#606060;
+}
+nav#menu a li, nav#menu a, nav#menu li {
+	-webkit-transition:all .4s;
+	-moz-transition:all .4s;
+	-o-transition:all .4s;
+	transition:all .4s;
+}
+nav#menu li {
+	display:inline-block;
+	background-color:#dddddd;
+	padding:6px;
+	margin:0px;
+}
+nav#menu a li:hover, nav#menu a:hover, nav#menu a:hover li{
+	color: white;
+}
+nav#menu a li, nav#menu a{
+	color: #333333;
+}
+div.espacador-menu{
+	width:3px;
+	display:inline-block
+}
+
+div#topo, div#topo2{
+	background-position:center;
+	background-repeat:repeat;
+	padding:0px;
+	height:150px;
+	top:0px;
+	left:0px;
+	width:100%;
+}
+
+div#topo{
+	background-image:url(../_imagens/baixo.jpg);
+	background-size:100% 100%;
+	margin:auto;	
+	display:block;
+	box-shadow: 0px 0px 10px rgba(0,0,0,1);
+	z-index:10000;
+	position:absolute;
+}
+
+div#topo2{
+	background-image:url(../_imagens/cima.png);
+	background-size: 100% 100%;
+	position:relative;
+}
+
+section#corpo{
+	padding:15px;
+	position:relative;
+	padding-top:150px;
+	height:auto;
+}
+
+footer#rodape{
+	border-top:1px solid #777777;
+	text-align:center;
+	padding:10px;
+	opacity:.9;
+	font-size:10pt;
+}
+
+h1.titulo-local{
+	color:#555555;
+	background-color:rgba(204,204,204,.4);
+	padding:3px;
+	padding-left: 8px;
+	box-shadow:0px 0px 5px rgb(204,204,204);
+}
+div#espacador-final{
+	height:10px;
+	width:342px;/*min-width da pagina + 12(2%)*/
+}

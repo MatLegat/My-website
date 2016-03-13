@@ -1,0 +1,43 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+
+body {
+	font-family: Ubuntu, sans-serif;
+	color: #444444;
+	background: #f2f2f2;
+}
+div#center {
+	width: 28em;
+	height: 8.1em;
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+div#icon {
+	height:100%;
+	width:48px;
+}
+div#title {
+	position:absolute;
+	left:48px;
+	top:3px;
+	border-bottom: 1px solid #a7a7a7;
+	padding-bottom:13px;
+	margin-left:15px;
+	padding-left:2px
+	width:11em;
+	font-size:26pt;
+	color:black;
+}
+div#text {
+	position:absolute;
+	left:48px;
+	top:50px;
+	padding-top:4px;
+	padding-left:2px;
+	margin-left:15px;
+	width:23.5em;
+}
