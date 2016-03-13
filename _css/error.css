@@ -6,12 +6,17 @@ body {
 	color: #444444;
 	background: #f2f2f2;
 }
+img {
+	outline: 0;
+	display:block;
+	vertical-align:top;
+}
 div#center {
-	width: 28em;
-	height: 8.1em;
+	width: 29.8em;
+	height: 11em;
 	position: absolute;
-	top:0;
 	bottom: 0;
+    top:0;
 	left: 0;
 	right: 0;
 	margin: auto;
@@ -27,8 +32,8 @@ div#title {
 	border-bottom: 1px solid #a7a7a7;
 	padding-bottom:13px;
 	margin-left:15px;
-	padding-left:2px
-	width:11em;
+	padding-left:2px;
+	width:11.8em;
 	font-size:26pt;
 	color:black;
 }
@@ -39,5 +44,6 @@ div#text {
 	padding-top:4px;
 	padding-left:2px;
 	margin-left:15px;
-	width:23.5em;
+	width:25.5em;
+	word-break: break-all
 }
