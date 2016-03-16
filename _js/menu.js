@@ -1,25 +1,30 @@
+
 var showingMenu = false;
+var changingMenu = false;
+var menu;
 var darkner;
-var hidesWaiting = 0;
 
-$(document).ready(function(){
+$(document).ready(function() {
     darkner = document.getElementById('darkner');
+    menu = document.getElementById('menu');
 
-    $("#darkner").click(function(){
-        hideMenu();
+    $("#button").load("/_icons/menu.html"); 
+    
+    $("#button").click(function() {
+        menuSwap();
     });
 
-    $("#button").click(function(){
-        menuSwap();
+    $("#darkner").click(function() {
+        hideMenu();
     });
 
     $(".swipeArea").swipe({
         swipeStatus:function(event, phase, direction, distance, duration, fingers) {
-            if (phase == "move" && direction == "right" && distance > 40) {
+            if (phase == "move" && direction == "right" && distance > 50) {
                 showMenu();
                 return 0;
             }
-            if (phase == "move" && direction == "left" && distance > 40) {
+            if (phase == "move" && direction == "left" && distance > 50) {
                 hideMenu();
                 return 0;
             }
@@ -29,46 +34,64 @@ $(document).ready(function(){
 });
 
 function menuSwap() {
-    if (!showingMenu) {
-        showMenu();
-    } else {
+    if (showingMenu) {
         hideMenu();
+    } else {
+        showMenu();
     }
 }
-
 function showMenu() {
-    if(showingMenu) {
-        return 0;
+    if (showingMenu || changingMenu) {
+        return;
     }
-
-    $("#menu").animate({left: '-1px'});
+    changingMenu = true;
     showingMenu = true;
     darkner.style.display = "block";
-    darkner.style.left = "100%"
-    setTimeout(changeDarkner, 1);
+    darkner.style.left = 0;
+    darkner.style.pointerEvents = "all";
+    $("#menu").animate({left: '-1px'}, 400, menuChanged);
+    $("#darkner").animate({opacity: '0.4'}, 400);
+    animateButton();
 }
 
 function hideMenu() {
-    if(!showingMenu) {
-        return 0;
+    if (!showingMenu || changingMenu) {
+        return;
     }
-
-    $("#menu").animate({left: '-15em'});
+    changingMenu = true;
     showingMenu = false;
-    darkner.style.opacity = 0;
     darkner.style.pointerEvents = "none";
-    hidesWaiting++;
-    setTimeout(changeDarkner, 600);
+    $("#menu").animate({left: '-15em'}, 400, menuChanged);
+    $("#darkner").animate({opacity: '0'}, 400);
+    animateButton();
 }
 
-function changeDarkner() {
+function menuChanged() {
+    changingMenu = false;
     if (!showingMenu) {
-        hidesWaiting--;
-        if(hidesWaiting == 0)
-            darkner.style.display = "none";
+        darkner.style.display = "none";
+        darkner.style.left = "100%";
+    }
+}
+
+function animateButton() {
+    if (showingMenu) {
+        var animationRotate1 = document.getElementById("animationRotate1");
+        var animationBack1 = document.getElementById("animationBack1");
+        var animationBack2 = document.getElementById("animationBack2");
+        var animationBack3 = document.getElementById("animationBack3");
+        animationRotate1.beginElement();
+        animationBack1.beginElement();
+        animationBack2.beginElement();
+        animationBack3.beginElement();
     } else {
-        darkner.style.opacity = 0.4;
-        darkner.style.pointerEvents = "all";
-        darkner.style.left = 0;
+        var animationRotate2 = document.getElementById("animationRotate2");
+        var animationMenu1 = document.getElementById("animationMenu1");
+        var animationMenu2 = document.getElementById("animationMenu2");
+        var animationMenu3 = document.getElementById("animationMenu3");
+        animationRotate2.beginElement();
+        animationMenu1.beginElement();
+        animationMenu2.beginElement();
+        animationMenu3.beginElement();
     }
 }
