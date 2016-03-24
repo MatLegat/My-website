@@ -1,15 +1,27 @@
 
+const animationDuration = 300;
 var showingMenu = false;
 var changingMenu = false;
 var menu;
 var darkner;
 
 $(document).ready(function() {
+
+    if(window.location.href.endsWith("index.html")) {
+        window.self.location.assign(window.location.href.replace('index.html',''));
+    }
+
+    if(loadedInIframe()) {
+        window.top.location.assign("/");
+    }
+
+    loadRequest();
+
     darkner = document.getElementById('darkner');
     menu = document.getElementById('menu');
 
-    $("#button").load("/_icons/menu.html"); 
-    
+    $("#button").load("/_icons/menu.html");
+
     $("#button").click(function() {
         menuSwap();
     });
@@ -49,8 +61,8 @@ function showMenu() {
     darkner.style.display = "block";
     darkner.style.left = 0;
     darkner.style.pointerEvents = "all";
-    $("#menu").animate({left: '-1px'}, 400, menuChanged);
-    $("#darkner").animate({opacity: '0.4'}, 400);
+    $("#menu").animate({left: '-1px'}, animationDuration, menuChanged);
+    $("#darkner").animate({opacity: '0.4'}, animationDuration);
     animateButton();
 }
 
@@ -61,8 +73,8 @@ function hideMenu() {
     changingMenu = true;
     showingMenu = false;
     darkner.style.pointerEvents = "none";
-    $("#menu").animate({left: '-15em'}, 400, menuChanged);
-    $("#darkner").animate({opacity: '0'}, 400);
+    $("#menu").animate({left: '-15em'}, animationDuration, menuChanged);
+    $("#darkner").animate({opacity: '0'}, animationDuration);
     animateButton();
 }
 
@@ -94,4 +106,39 @@ function animateButton() {
         animationMenu2.beginElement();
         animationMenu3.beginElement();
     }
+}
+
+function loadRequest() {
+    var request = getCookie("request");
+    if (request != "") {
+        document.getElementById("contentFrame").src = request;
+    } else {
+      document.getElementById("contentFrame").src = "/content/home.html";
+    }
+}
+
+function getCookie(name) {
+    var search = name + "=";
+    var array = document.cookie.split(';');
+    for(var i=0; i<array.length; i++) {
+        var cookie = array[i];
+        while (cookie.charAt(0)==' ')
+            cookie = cookie.substring(1);
+        if (cookie.indexOf(search) == 0)
+            return cookie.substring(search.length,cookie.length);
+    }
+    return "";
+}
+
+function loadedInIframe () {
+    try {
+        return window.self !== window.top;
+    } catch (e) {
+        return true;
+    }
+}
+
+function link(url) {
+    hideMenu();
+    document.getElementById("contentFrame").contentWindow.changeUrl(url);
 }

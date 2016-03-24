@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html manifest=".appcache">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="Content-Language" content="pt-br, en">
@@ -20,34 +20,24 @@
         </div>
 
         <div id="menu" class="swipeArea">
-            <p><a href="./">Home</a></p>
-            <p>No more pages yet :(</p>
+            <p><a href="/content/home.html" target="loader" onclick="link('/content/home.html')">
+                Home
+            </a></p>
+            <p><a href="/ooo" target="loader" onclick="link('/ooo')">
+                Teste 404
+            </a></p>
+            <p><a href="/.git" target="loader" onclick="link('/.git')">
+                Teste 403
+            </a></p>
         </div>
 
         <div id="swipeArea" class="swipeArea"></div>
 
         <div id="darkner" class="swipeArea"></div>
 
-        <div id="page">
+        <iframe id="contentFrame" name="contentFrame"></iframe>
 
-                <div class="card">
-                    <div class="card-title">Página em construção</div>
-                    <div class="card-text">
-                        <a href="old">Ver página antiga (sem informações)</a>
-                    </div>
-                </div>
+        <iframe id="loader" name="loader"></iframe>
 
-                <div class="card">
-                    <div class="card-title">Contato</div>
-                    <div class="card-text">
-                        <a href="mailto:matteuslegat@gmail.com" onclick="alert('matteuslegat@gmail.com')" title="matteuslegat@gmail.com">Email</a>
-                        <br>
-                        <a href="http://facebook.com/matteus.legat" target="_blank">Facebook</a>
-                        <br>
-                        <a href="https://plus.google.com/u/0/110430598846492865230" target="_blank">Google+</a>
-                    </div>
-                </div>
-
-        </div>
     </body>
 </html>

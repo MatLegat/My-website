@@ -33,9 +33,8 @@ img {
 }
 
 div#page {
-	height: auto;
 	position: absolute;
-	top: 60px;
+	top: 3.5em;
 	width: 100%;
 	margin: 0 auto;
 	padding: 0;
@@ -149,4 +148,20 @@ div.card-title {
 div.card-text {
 	padding: 0.4em;
 	padding-bottom: 0;
+}
+
+iframe#contentFrame {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border: none;
+}
+
+iframe#loader {
+	position: absolute;
+	z-index: -1;
+	width: 0px;
+	height: 0px;
+	border: none;
+	display: none;
 }
