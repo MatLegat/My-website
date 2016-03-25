@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html manifest=".appcache">
+<html>
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="Content-Language" content="pt-br, en">
@@ -7,8 +7,9 @@
         <meta name="theme-color" content="#283593">
         <meta name="msapplication-TileColor" content="#283593"/>
         <title/> Matteus Legat </title>
-        <link rel="stylesheet" type="text/css" href="/_css/style.css" />
+        <link rel="stylesheet" type="text/css" href="/_css/menu.css" />
         <script type="text/javascript" src="/_js/jquery.min.js"></script>
+        <script type="text/javascript" src="/_js/jquery.color.min.js"></script>
         <script type="text/javascript" src="/_js/jquery.touchSwipe.min.js"></script>
         <script type="text/javascript" src="/_js/menu.js"></script>
     </head>
@@ -23,7 +24,7 @@
             <p><a href="/content/home.html" target="loader" onclick="link('/content/home.html')">
                 Home
             </a></p>
-            <p><a href="/ooo" target="loader" onclick="link('/ooo')">
+            <p><a href="/ooo" target="loader" onclick="link('/foo')">
                 Teste 404
             </a></p>
             <p><a href="/.git" target="loader" onclick="link('/.git')">
@@ -35,7 +36,14 @@
 
         <div id="darkner" class="swipeArea"></div>
 
-        <iframe id="contentFrame" name="contentFrame"></iframe>
+        <script>
+            document.write(
+              '<iframe id="contentFrame" name="contentFrame"></iframe>'
+            );
+        </script>
+        <noscript>
+            <iframe id="contentFrame" src="/_error/nojs.html"></iframe>
+        </noscript>
 
         <iframe id="loader" name="loader"></iframe>
 

@@ -17,6 +17,8 @@ $(document).ready(function() {
 
     loadRequest();
 
+    showTopBar();
+
     darkner = document.getElementById('darkner');
     menu = document.getElementById('menu');
 
@@ -128,6 +130,13 @@ function getCookie(name) {
             return cookie.substring(search.length,cookie.length);
     }
     return "";
+}
+
+function showTopBar() {
+  $("body").animate({backgroundColor : "#ffffff"}, 0);
+  $("#top").animate({top: "-4em"}, 0);
+  $("body").animate({backgroundColor : "#ebebeb"}, 350);
+  $("#top").animate({top: 0}, 300);
 }
 
 function loadedInIframe () {

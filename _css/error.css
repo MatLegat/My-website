@@ -4,7 +4,7 @@
 body {
 	font-family: Ubuntu, sans-serif;
 	color: #444444;
-	background: #f2f2f2;
+	background-color: rgba(235, 235, 235, 0);
 }
 img {
 	outline: 0;
@@ -12,11 +12,11 @@ img {
 	vertical-align:top;
 }
 div#center {
-	width: 29.8em;
+	width: 30em;
 	height: 11em;
 	position: absolute;
 	bottom: 0;
-    top:0;
+	top: 4em;
 	left: 0;
 	right: 0;
 	margin: auto;
@@ -33,7 +33,7 @@ div#title {
 	padding-bottom:13px;
 	margin-left:15px;
 	padding-left:2px;
-	width:11.8em;
+	width:12em;
 	font-size:26pt;
 	color:black;
 }
@@ -44,6 +44,6 @@ div#text {
 	padding-top:4px;
 	padding-left:2px;
 	margin-left:15px;
-	width:25.5em;
+	width:26em;
 	word-break: break-all
 }
