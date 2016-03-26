@@ -15,9 +15,8 @@ $(document).ready(function() {
         window.top.location.assign("/");
     }
 
-    loadRequest();
-
-    showTopBar();
+    $("#top").hide();
+    $("body").css("background-color", "#ffffff");
 
     darkner = document.getElementById('darkner');
     menu = document.getElementById('menu');
@@ -46,6 +45,11 @@ $(document).ready(function() {
     });
 
 });
+
+window.onload = function() {
+    showTopBar();
+    loadRequest();
+}
 
 function menuSwap() {
     if (showingMenu) {
@@ -115,7 +119,7 @@ function loadRequest() {
     if (request != "") {
         document.getElementById("contentFrame").src = request;
     } else {
-      document.getElementById("contentFrame").src = "/content/home.html";
+        document.getElementById("contentFrame").src = "/content/home.html";
     }
 }
 
@@ -133,10 +137,10 @@ function getCookie(name) {
 }
 
 function showTopBar() {
-  $("body").animate({backgroundColor : "#ffffff"}, 0);
-  $("#top").animate({top: "-4em"}, 0);
-  $("body").animate({backgroundColor : "#ebebeb"}, 350);
-  $("#top").animate({top: 0}, 300);
+    $("#top").show();
+    $("#top").animate({top: "-4em"}, 0);
+    $("body").animate({backgroundColor : "#ebebeb"}, 350);
+    $("#top").animate({top: 0}, 300);
 }
 
 function loadedInIframe () {

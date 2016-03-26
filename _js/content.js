@@ -6,15 +6,21 @@ $(document).ready(function() {
     if(!loadedInIframe()) {
         window.location.assign("/");
     }
+
+    $(".card").hide();
+    $("#center").hide();
+
+});
+
+window.onload = function() {
     try {
         showErrors();
     } catch (e) {
         showCards();
     }
+}
 
-});
-
-function loadedInIframe () {
+function loadedInIframe() {
     try {
         return window.self !== window.top;
     } catch (e) {
@@ -32,8 +38,8 @@ function changeUrl(url) {
 }
 
 function hideCards() {
-  var height = $("#page").height();
-  $(".card").animate({top: -height+"px"}, 150);
+    var height = $("#page").height();
+    $(".card").animate({top: -height+"px"}, 150);
 }
 
 function hideErrors() {
@@ -50,6 +56,7 @@ function showCards() {
 }
 
 function showErrors() {
+    $("#center").show();
     var height = $("#center").height();
     var top = $("#center").offset().top;
     $("#center").css("bottom", "unset");
