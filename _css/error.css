@@ -2,70 +2,70 @@
 
 /* latin-ext */
 @font-face {
-  font-family: 'Ubuntu';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Ubuntu'), url(/_fonts/ubuntu.ext.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Ubuntu'), url(/_fonts/ubuntu.ext.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
-  font-family: 'Ubuntu';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Ubuntu'), url(/_fonts/ubuntu.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Ubuntu'), url(/_fonts/ubuntu.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 
 body {
-	font-family: Ubuntu, sans-serif;
-	color: #444444;
-	background-color: rgba(235, 235, 235, 0);
+    font-family: Ubuntu, sans-serif;
+    color: #444444;
+    background-color: rgba(235, 235, 235, 0);
 }
 
 img {
-	outline: 0;
-	display:block;
-	vertical-align:top;
+    outline: 0;
+    display:block;
+    vertical-align:top;
 }
 
 div#center {
   padding: 0.5em;
-	width: 30.5em;
-	height: 11em;
-	position: absolute;
-	bottom: 0;
-	top: 4em;
-	left: 0;
-	right: 0;
-	margin: auto;
+    width: 30.5em;
+    height: 11em;
+    position: absolute;
+    bottom: 0;
+    top: 4em;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 div#icon {
-	height:100%;
-	width:48px;
+    height:100%;
+    width:48px;
 }
 
 div#title {
-	position:absolute;
-	left:48px;
-	top:3px;
-	border-bottom: 1px solid #a7a7a7;
-	padding-bottom:13px;
-	margin-left:15px;
-	padding-left:2px;
-	width:12em;
-	font-size:26pt;
-	color:black;
+    position:absolute;
+    left:48px;
+    top:3px;
+    border-bottom: 1px solid #a7a7a7;
+    padding-bottom:13px;
+    margin-left:15px;
+    padding-left:2px;
+    width:12em;
+    font-size:26pt;
+    color:black;
 }
 
 div#text {
-	position:absolute;
-	left:48px;
-	top:50px;
-	padding-top:4px;
-	padding-left:2px;
-	margin-left:15px;
-	width:26em;
-	word-break: break-all;
+    position:absolute;
+    left:48px;
+    top:50px;
+    padding-top:4px;
+    padding-left:2px;
+    margin-left:15px;
+    width:26em;
+    word-break: break-all;
 }
