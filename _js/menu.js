@@ -116,7 +116,7 @@ function animateButton() {
 
 function loadRequest() {
     var request = getCookie("request");
-    if (request != "") {
+    if (request.charAt(0)=='/') {
         document.getElementById("contentFrame").src = request;
     } else {
         document.getElementById("contentFrame").src = "/content/home.html";

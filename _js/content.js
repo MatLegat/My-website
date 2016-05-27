@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
 
-    document.cookie="request=" + window.location.href + "; path=/";
+    document.cookie="request=" + window.location.pathname + "; path=/";
 
     if(!loadedInIframe()) {
         window.location.assign("/");

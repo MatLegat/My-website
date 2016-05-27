@@ -3,5 +3,3 @@ RewriteBase /
 
 ErrorDocument 403 /_error/403.html
 ErrorDocument 404 /_error/404.html
-
-Options -Indexes
