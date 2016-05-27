@@ -75,12 +75,13 @@ button.next {
 }
 
 button {
+    opacity: 0.5;
     height: 2.5em;
-    background-color: #fff;
-    color: #008;
+    background-color: transparent;
+    color: #005;
     font-weight: bold;
     font-size: 0;
-    border: 0.2em solid #008;
+    border: 0.2em solid #005;
     border-radius: 0.3em;
     outline: none;
     -webkit-transition:all 300ms;
@@ -94,6 +95,6 @@ button::-moz-focus-inner {
 }
 
 button:disabled {
-    color: #ddd;
-    border: 0.2em solid #ddd;
+    color: #ccc;
+    border: 0.2em solid #ccc;
 }
