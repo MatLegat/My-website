@@ -31,7 +31,7 @@ function reset()
 }
 
 function deleteCookie(name) {
-    document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/service/ru/';
 }
 
 function getCookie(name) {
@@ -56,10 +56,10 @@ function save() {
     var expires = new Date();
     expires.setTime(expires.getTime() + (3600 * 1000 * 24 * 365 * 10));
     document.cookie = "display=" + JSON.stringify(json) +
-        "; expires=" + expires.toUTCString();
+        "; expires=" + expires.toUTCString() + ";path=/service/ru/";
     document.cookie = "size=" + fontSize +
-        "; expires=" + expires.toUTCString();
-    window.location=".";
+        "; expires=" + expires.toUTCString() + ";path=/service/ru/";
+    window.location="..";
 }
 
 function plus() {
