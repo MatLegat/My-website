@@ -54,7 +54,7 @@ function save() {
         json[inputs[i].id] = inputs[i].checked;
     }
     var expires = new Date();
-    expires.setTime(expires.getTime() + (3600 * 1000 * 24 * 365 * 10));
+    expires.setTime(expires.getTime() + (3600 * 1000 * 24 * 365));
     document.cookie = "display=" + JSON.stringify(json) +
         "; expires=" + expires.toUTCString() + ";path=/service/ru/";
     document.cookie = "size=" + fontSize +
