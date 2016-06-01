@@ -1,0 +1,3 @@
+[submodule "service/grades"]
+	path = service/grades
+	url = git://github.com/MatLegat/grades-manager.git
