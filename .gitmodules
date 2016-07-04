@@ -1,6 +1,0 @@
-[submodule "service/grades"]
-	path = service/grades
-	url = git://github.com/MatLegat/grades-manager.git
-[submodule "service/todo"]
-	path = service/todo
-	url = git://github.com/matlegat/meteor-tutorial.git
