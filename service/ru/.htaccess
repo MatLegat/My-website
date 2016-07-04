@@ -1,2 +1,1 @@
-ErrorDocument 404 '<meta http-equiv="refresh" content="0;url=/service/ru/">'
-ErrorDocument 403 '<meta http-equiv="refresh" content="0;url=/service/ru/">'
+Redirect 301 / https://ru.legat.ml/
