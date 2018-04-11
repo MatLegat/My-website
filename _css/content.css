@@ -81,3 +81,68 @@ div.card-text {
     padding: 0.4em;
     padding-bottom: 0;
 }
+
+div.flex {
+    margin-top: 1.2em;
+    text-align: center;
+    display: flex;
+}
+@media only screen and (max-width: 800px) {
+    div.flex {
+        display: block !important;
+    }
+}
+.sameRow {
+    margin-top: 0.3em;
+    margin-bottom: : 0.2em;
+    width: 100%;
+}
+.normal {
+    height: 40px;
+}
+
+#profile-pic {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 2em;
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    border: 1px solid #bbb;
+    padding: 0.3em;
+    background-color: #eee;
+}
+
+.center {
+    text-align: center;
+}
+
+#intro {
+    background-image: url("https://instagram.fcwb2-2.fna.fbcdn.net/vp/7c0794b22aaeaa8ef4f23f08cc026449/5B635ACC/t51.2885-15/e35/19984605_1252946254830834_8259614137642909696_n.jpg");
+    background-size: 108% auto;
+    background-position: 0 60%;
+    height: 14em;
+    margin: -20px -20px 10px -20px;
+    padding: 0;
+    border-radius: 2px;
+    border-bottom: 1px solid #444;
+}
+#intro-gradient {
+    background-image: linear-gradient(to top,rgba(255,255,255,0), rgba(255,255,255,1));
+    height: 14em;
+    border-radius: 2px
+}
+
+#profile-name {
+    position: relative;
+    top: 3.25em;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+    font-size: 16pt;
+}
+
+.spacer {
+    width: auto;
+    height: 2em;
+}
