@@ -9,6 +9,8 @@ $(document).ready(function() {
 
     $(".card").hide();
     $("#center").hide();
+    $("#loading").hide();
+    $("#loading").fadeIn();
 
 });
 
@@ -16,7 +18,20 @@ window.onload = function() {
     try {
         showErrors();
     } catch (e) {
-        showCards();
+        loadIntroBg(showCards);
+    }
+}
+
+function loadIntroBg(callback) {
+    var introBgSrc = $('#intro').css('background-image');
+    if (introBgSrc != undefined) {
+        var url = introBgSrc.match(/\((.*?)\)/)[1].replace(/('|")/g,'');
+        var img = new Image();
+        img.onload = callback;
+        img.src = url;
+        if (img.complete) img.onload();
+    } else {
+        callback();
     }
 }
 
@@ -49,6 +64,7 @@ function hideErrors() {
 }
 
 function showCards() {
+    $("#loading").fadeOut(150);
     $(".card").show();
     var height = $("#page").height() + $("#page").offset().top;
     $(".card").animate({top: -height+"px"}, 0);
