@@ -89,12 +89,12 @@ div#menu {
     width: 10em;
     border: none;
     position: fixed;
-    top:30px;
+    top:0px;
     height: 100%;
     box-shadow:0px 0px 8px rgba(0,0,0,0.5);
-    padding: 25px;
-    padding-top: 30px;
+    padding: 0 25px;
     left: -15em;
+    overflow-y: auto;
 }
 
 span#button {
@@ -142,4 +142,16 @@ iframe#loader {
     height: 0px;
     border: none;
     display: none;
+}
+
+div.separator {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0.5em;
+    padding-top: 0.8em;
+    width: auto;
+}
+
+div.menu-spacer {
+    height: 60px;
+    width: auto;
 }

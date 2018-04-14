@@ -1,5 +1,21 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+/* latin-ext */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto'), local('Roboto-Regular'), url(/_fonts/roboto.ext.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto'), local('Roboto-Regular'), url(/_fonts/roboto.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
 
 body {
     text-align: justify;
@@ -81,11 +97,9 @@ div.card-title {
 div.card-text {
     padding: 0.4em;
     padding-bottom: 0;
-    margin-left: 1em;
 }
 
 div.flex {
-    margin-top: 1.2em;
     text-align: center;
     display: flex;
 }
@@ -95,8 +109,8 @@ div.flex {
     }
 }
 .sameRow {
-    margin-top: 0.3em;
-    margin-bottom: : 0.2em;
+    margin-top: 0.7em;
+    margin-bottom: 0.5em;
     width: 100%;
 }
 .normal {
@@ -147,7 +161,10 @@ div.flex {
 .spacer {
     width: auto;
     height: 2em;
+    text-align: center;
+    color: #ddd;
 }
+
 .spacer-small {
     width: auto;
     height: 0.5em;
@@ -192,7 +209,7 @@ p {
 }
 
 div.ident {
-    margin-left: 2em;
+    margin-left: 1.5em;
 }
 
 div.separator {
@@ -200,4 +217,25 @@ div.separator {
     padding: 0.3em;
     padding-top: 0.8em;
     width: auto;
+}
+
+div.bar {
+    height: 1.2em;
+    width: 85%;
+    margin: 0 auto;
+    background-color: #ccc;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    border-radius: 2px;
+}
+
+div.bar-fill {
+    height: 100%;
+    margin: 0;
+    background-color: #444;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    border-radius: 2px;
+}
+
+div.flex p {
+    margin-bottom: 0.3em;
 }
