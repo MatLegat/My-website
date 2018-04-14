@@ -171,6 +171,7 @@ div.flex {
     height: 2em;
     text-align: center;
     color: #ddd;
+    opacity: 0.7;
 }
 
 .spacer-small {
@@ -268,4 +269,12 @@ i.material-icons {
     margin-right: 0.5em !important;
     position: relative;
     top: 0.17em;
+}
+
+iframe#innerFrame {
+    position: fixed;
+    width: 100%;
+    height: calc(100% - 3.5em);
+    border: none;
+    top: 3.5em;
 }

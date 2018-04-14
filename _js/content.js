@@ -9,6 +9,7 @@ $(document).ready(function() {
 
     $(".card").hide();
     $(".card").css({ opacity: 1 })
+    $("iframe").hide();
     $("#center").hide();
     $("#loading").hide();
     $("#loading").fadeIn();
@@ -43,6 +44,7 @@ function changeUrl(url) {
 function hideCards() {
     var height = $("#page").height();
     $(".card").animate({top: -height+"px"}, 150);
+    $("iframe").fadeOut(150);
 }
 
 function hideErrors() {
@@ -53,9 +55,12 @@ function hideErrors() {
 
 function showCards() {
     $("#loading").fadeOut(150);
+    $("iframe").fadeIn(150);
     $(".card").show();
-    var height = $("#page").height() + $("#page").offset().top;
-    $(".card").animate({top: -height+"px"}, 0);
+    if ($("#page").length) {
+        var height = $("#page").height() + $("#page").offset().top;
+        $(".card").animate({top: -height+"px"}, 0);
+    }
     $(".card").animate({top: 0}, 150);
 }
 

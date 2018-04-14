@@ -146,8 +146,8 @@ iframe#loader {
 
 div.separator {
     border-bottom: 1px solid #e0e0e0;
-    padding: 0.5em;
-    padding-top: 0.8em;
+    padding-top: 0.7em;
+    margin-bottom: 0.5em;
     width: auto;
 }
 
