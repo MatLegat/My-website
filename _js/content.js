@@ -72,3 +72,8 @@ function showErrors() {
     $("#center").animate({top: -top-height+"px"}, 0);
     $("#center").animate({top: top+"px"}, 300);
 }
+
+function getAge() {
+    const birthday = new Date('04/06/1997');
+    return new Date(new Date() - birthday).getUTCFullYear() - new Date(0).getUTCFullYear()
+}
