@@ -76,7 +76,7 @@ div#darkner {
 
 div#swipeArea {
     position: fixed;
-    width: 1em;
+    width: 1.5em;
     height: 100%;
     left: 0;
     z-index: 2;
