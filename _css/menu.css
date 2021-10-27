@@ -133,6 +133,8 @@ iframe#contentFrame {
     height: 100%;
     border: none;
     top: 0;
+    overflow:scroll !important;
+    -webkit-overflow-scrolling:touch !important;
 }
 
 iframe#loader {
